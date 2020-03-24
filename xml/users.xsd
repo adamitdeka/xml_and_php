@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fname" type="xs:string" />
+                                        <xs:element name="lname" type="xs:string" />
+                                    </xs:sequence>  
+                                    <xs:attribute name="title" type="titles" />
+                                </xs:complexType>
+                            </xs:element>  
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="username" type="xs:string" />
+                            <xs:element name="password" type="xs:string"/>
+                            <xs:element name="phone" type="xs:string" />
+                            <xs:element name="country" type="xs:string" /> 
+                        </xs:sequence>
+                        <xs:attribute name="type" type="userType" use="required" />
+                        <xs:attribute name="id" type="xs:unsignedInt" use="required" />
+                    </xs:complexType>                
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="titles">
+        <xs:restriction base="xs:string">
+        <xs:enumeration value="Sir" />
+        <xs:enumeration value="Lord" />
+        <xs:enumeration value="Lady" />
+        <xs:enumeration value="Mr" />
+        <xs:enumeration value="Mrs" />
+        <xs:enumeration value="Miss" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="userType">
+        <xs:restriction base="xs:string">
+        <xs:enumeration value="client"/>
+        <xs:enumeration value="staff"/>
+        <xs:enumeration value="admin"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

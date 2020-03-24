@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin:0;
+}
+main{
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.formBox{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:1em;
+    border: 2px dashed black;
+    background-color: #f0f0e1;
+}
+
+
+.formBox_fieldset{
+    max-width: 600px;
+    padding:1em;
+}
+
+.loginBox{
+    max-width:250px;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 5px;;
+}
+
+.loginBox_label{
+    width: 70px;
+    background-color: #a9a9a9;
+}
+
+.error_field{
+    color: red;
+    padding: 1em;
+}
+
+.loginBox_submit{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.list-container{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid black;
+    margin: 1em;
+}
+.list-row{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    
+}
+.column-heading{
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #a9a9a9;
+}
+.row-items{
+    text-align: center;
+    border: 1px solid black;
+    flex: 1 0 0;
+    padding:0.5em;
+}
+.add-form{
+    text-align: center;
+}
+.form-field{
+    width:100%;
+    margin:1em;
+}
+.field-label{
+    font-size: 1.2em;
+    padding: 1em;
+    
+}
+.text-field{
+    width:80%;
+    height: 40px;
+}
+.submit-button{
+    width:80px;
+    height:40px;
+    background-color: #a9a9a9;
+    border-style: none;
+}
+
+
+
+

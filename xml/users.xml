@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+    <user type="client" id="10024">
+        <name title="Mr">
+            <fname>Amit</fname>
+            <lname>Deka</lname>
+        </name>
+        <email>adamitdeka@gmail.com</email>
+        <username>adamitdeka03</username>
+        <password>0cb1eb413b8f7cee17701a37a1d74dc3</password>
+        <phone>1236547890</phone>
+        <country>Canada</country>
+    </user>
+    <user type="staff" id="20056">
+        <name title="Mr">
+            <fname>Mark</fname>
+            <lname>Wilson</lname>
+        </name>
+        <email>markwilson@abc.com</email>
+        <username>abcmark123</username>
+        <password>ea82410c7a9991816b5eeeebe195e20a</password>
+        <phone>4568562355</phone>
+        <country>USA</country>
+    </user>
+</users>
