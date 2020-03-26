@@ -28,6 +28,7 @@
     <body>
         <main>
             <h1>Submitted tickets</h1>
+            <a href="index.php">Logout</a>
             <div><a href="newTicket.php">New ticket</a></div>
             <div class="list-container">
                 <div class="list-row">
@@ -43,7 +44,7 @@
                         echo('<div class="list-row">
                                 <div class="list-data row-items">'.($i+1).'</div>
                                 <div class="list-data row-items">'.$userTickets[$i]['ts'].'</div>
-                                <div class="list-data row-items"><a href="showTicket.php?id='.$userTickets[$i]['id'].'">'.$userTickets[$i]->subject.'</a></div>
+                                <div class="list-data row-items"><a href="showTicketC.php?id='.$userTickets[$i]['id'].'">'.$userTickets[$i]->subject.'</a></div>
                                 <div class="list-data row-items">'.$userTickets[$i]->status.'</div>
                             </div>');
                     }

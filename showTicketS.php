@@ -4,6 +4,8 @@
     $userid = $_SESSION['userid'];
     //loading tickets.xml file
     $tickets = simplexml_load_file('xml/tickets.xml');
+    //loading users.xml file to fetch username
+    $users = simplexml_load_file('xml/users.xml');
     //fetching ticketid from url
     $ticketId = $_GET['id'];
     $userTickets = [];
@@ -17,6 +19,21 @@
            $ticketMsgs = $tickets->ticket[$i]->message;
         }
     }
+    //updating status of the ticket
+    if(isset($_POST['status-update'])){
+        var_dump('Update working');
+    }
+    //sending message
+    if(isset($_POST['msg-send'])){
+        if($_POST['msg-text'] != "" || $_POST['msg-text'] != null){
+            $msgText = $_POST['msg-text'];
+            //adding message element
+            $message = $tickets->ticket[$ticketId-1]->addChild('message', $msgText);
+            //attr of message element
+            $message->addAttribute('sentby', $userid);
+            $tickets->saveXML('xml/tickets.xml');
+        }
+    }
 ?>
 
 <html>
@@ -28,11 +45,14 @@
     <body>
         <main>
             <h1>Subject: <?=$ticketSubject?></h1>
+            <a href="staff.php">Home</a>
+            <a href="index.php">Logout</a>
             <div class="ticket-data-container">
                 <div class="ticket-data">User Id: <?=$ticketUserId?></div>
                 <div class="ticket-data">Status:
                     <form>
-                        <select class="status-dropdown">
+                    <!--Ticket status dropdown-->
+                        <select class="status-dropdown" name="ticket-status">
                             <option value="ongoing" 
                                 <?php
                                     if($ticketStatus == "ongoing"){
@@ -56,7 +76,7 @@
                                 resolved
                             </option>
                         </select>
-                        <input type="submit" value="Update" name="ticket-submit" class="submit-button">
+                        <input type="submit" value="Update" name="status-update" class="submit-button">
                         <div class="ticket-data">
                             Last updated: <?=$statusLu?>
                         </div>
@@ -71,9 +91,30 @@
                     <?php
                         foreach($ticketMsgs as $ticketMsg){
                             //display the messages
+                            if($ticketMsg['sentby']==$userid){
+                                echo('
+                                <div class="msg-container fromMsg">
+                                <div class="user-tn">You:</div>
+                                    <div class="msg">'.$ticketMsg.'</div>
+                                </div>
+                            ');
+                            }
+                            else{
+                                echo('
+                                <div class="msg-container toMsg">
+                                    <div class="user-tn">User:'.$ticketMsg['sentby'].'</div>
+                                    <div class="msg">'.$ticketMsg.'</div>
+                                </div>
+                            '); 
+                            }
+                            
                         }
                     ?>
                 </div>
+                <form method="post" class="msg-box">
+                    <input type="text" class="chat-input" name="msg-text" placeholder="Enter your message here">
+                    <input type="submit" name="msg-send" class="submit-button" value="send">
+                </form>
             </div>
         </main>
     </body>

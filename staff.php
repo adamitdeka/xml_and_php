@@ -20,7 +20,7 @@
     <body>
         <main>
             <h1>List of tickets</h1>
-            <div><a href="newTicket.php">New ticket</a></div>
+            <a href="index.php">Logout</a>
             <div class="list-container">
                 <div class="list-row">
                     <div class="column-heading row-items">S No.</div>
@@ -35,7 +35,7 @@
                     for($i=0; $i<sizeof($tickets); $i++){
                         echo('<div class="list-row">
                                 <div class="list-data row-items">'.$tickets->ticket[$i]['id'].'</div>
-                                <div class="list-data row-items"><a href="showTicket.php?id='.$tickets->ticket[$i]['id'].'">'.$tickets->ticket[$i]->subject.'</a></div>
+                                <div class="list-data row-items"><a href="showTicketS.php?id='.$tickets->ticket[$i]['id'].'">'.$tickets->ticket[$i]->subject.'</a></div>
                                 <div class="list-data row-items">'.$tickets->ticket[$i]['userid'].'</div>
                                 <div class="list-data row-items">'.$tickets->ticket[$i]['ts'].'</div>
                                 <div class="list-data row-items">'.$tickets->ticket[$i]->status.'</div>

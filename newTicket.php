@@ -45,6 +45,7 @@
         <main>
             <h1>New Ticket</h1>
             <a href="client.php">Home</a>
+            <a href="index.php">Logout</a>
             <form method="post" class="add-form">
                 <div class="form-field">
                     <label for="subject-field" class="field-label">Subject: </label>

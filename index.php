@@ -28,7 +28,6 @@
             $errorMsg = "Wrong username and password";
         }
         else{
-            var_dump($users->user[$i]['id'],$users->user[$i]['type']);
             session_start();
             $_SESSION['userid'] = (string)$users->user[$i]['id'];
             if($users->user[$i]['type'] == 'client'){

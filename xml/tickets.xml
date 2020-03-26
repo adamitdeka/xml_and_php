@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
-    <!--doi is date of issue and toi is time of issue-->
-    <ticket id="1" userid="10024" ts="2019-05-02T18:45:36">
-    <!--sdate is status date-->
-        <status sdate="2019-05-02">ongoing</status>
-        <subject>Laptop touchpad not working</subject>
-        <message sentby="10024"> I have a lenevo ideapad 330s. Touchpad is not working. I tried reinstalling the drivers.</message>
-        <message sentby="20056">Please try restarting your laptop after installing the drivers.</message>
-    </ticket>
-    <ticket id="2" userid="10025" ts="2018-02-05T21:36:15">
-        <status sdate="2018-02-16">Resolved</status>
-        <subject>Laptop touchpad not working</subject>
-        <message sentby="10024"> I have a lenevo ideapad 330s. Touchpad is not working. I tried reinstalling the drivers.</message>
-        <message sentby="20056">Please try restarting your laptop after installing the drivers.</message>
-    </ticket>
-<ticket id="3" userid="10024" ts="2020-03-23T21:50:23"><status sdate="2020-03-23">resolved</status><subject>speakers are making buzzing noise</subject><message sentby="10024">how to remove the noise coming from speakers</message></ticket><ticket id="4" userid="10024" ts="2020-03-24T01:31:11"><status sdate="2020-03-24">ongoing</status><subject>line in display</subject><message sentby="10024">a black line is showing in display when I restarted my laptop</message></ticket></tickets>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd"><ticket id="1" userid="10024" ts="2020-03-27T00:24:49"><status sdate="2020-03-27">ongoing</status><subject>how iron man died</subject><message sentby="10024">tell me!</message><message sentby="10024">please</message><message sentby="20056">he died while using all the stones</message></ticket></tickets>

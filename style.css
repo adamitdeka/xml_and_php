@@ -94,6 +94,33 @@ h1{
     border-style: none;
 }
 
+.ticket-data-container, .chatbox{
+    max-width: 900px;
+    margin:0 auto;
+    padding:1em;
+}
+
+.chatbox{
+    border: 1px solid black;
+}
+
+.user-tn{
+    margin-right: 0.5em;
+    font-weight: bold;
+}
+
+.msg-container{
+    display: flex;
+    padding:0.5em;
+    border-bottom: 0.5px solid grey;
+    margin:0.5em;
+}
+.tomsg{
+    background-color: gray;
+}
+
+
+
 
 
 

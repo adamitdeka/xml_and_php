@@ -7,7 +7,7 @@
         </name>
         <email>adamitdeka@gmail.com</email>
         <username>adamitdeka03</username>
-        <password>0cb1eb413b8f7cee17701a37a1d74dc3</password>
+        <password>client1</password>
         <phone>1236547890</phone>
         <country>Canada</country>
     </user>
@@ -18,8 +18,19 @@
         </name>
         <email>markwilson@abc.com</email>
         <username>abcmark123</username>
-        <password>ea82410c7a9991816b5eeeebe195e20a</password>
+        <password>staff1</password>
         <phone>4568562355</phone>
         <country>USA</country>
+    </user>
+    <user type="client" id="10025">
+        <name title="Mr">
+            <fname>Sahil</fname>
+            <lname>Mangla</lname>
+        </name>
+        <email>sahilmangla@gmail.com</email>
+        <username>smmangla</username>
+        <password>client2</password>
+        <phone>4568791234</phone>
+        <country>Canada</country>
     </user>
 </users>
